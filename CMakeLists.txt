@@ -10,11 +10,13 @@ include_directories(include)
 
 set(SOURCES
     src/node/node.cpp
+    src/linkedlist/linkedlist.cpp
 )
 
 add_executable(tests
     ${SOURCES}
     tests/node/test_node.cpp
+    tests/linkedlist/test_linkedlist.cpp
 )
 
 find_package(GTest REQUIRED)

@@ -10,6 +10,9 @@ public:
     Node();
     ~Node();
     Node(T obj);
+    void setData(int i) {
+        *Data = i;
+    }
     T getData();
     Node* getNext() const { return next; }
     Node* getPrev() const { return prev; }

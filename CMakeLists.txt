@@ -1,30 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(PROJECT_NAME cpp-cmake-template)
+set(PROJECT_NAME cpp-datastructures)
 
 project(${PROJECT_NAME})
 
 add_subdirectory(src)
 
-# Include directories for your project
 include_directories(include)
 
 set(SOURCES
-    src/bar/bar.cpp
-    src/foo/foo.cpp
+    src/node/node.cpp
 )
-
-add_executable(${PROJECT_NAME} 
-    ${SOURCES}
-    examples/bar/example_bar.cpp
-)
-
-target_include_directories(${PROJECT_NAME} PRIVATE src include examples)
 
 add_executable(tests
     ${SOURCES}
-    tests/bar/test_bar.cpp
-    tests/foo/test_foo.cpp
+    tests/node/test_node.cpp
 )
 
 find_package(GTest REQUIRED)

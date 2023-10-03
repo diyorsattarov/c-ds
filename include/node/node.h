@@ -11,6 +11,16 @@ public:
     ~Node();
     Node(T obj);
     T getData();
+    Node* getNext() const { return next; }
+    Node* getPrev() const { return prev; }
+
+    void setNext(Node* newNode) {
+        next = newNode;
+    }
+
+    void setPrev(Node* newNode) {
+        prev = newNode;
+    }
 };
 
 #endif // NODE_H
